@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module type="JAVA_MODULE" version="4">
   <component name="EclipseModuleManager">
-    <libelement value="jar://$MODULE_DIR$/WebRoot/WEB-INF/lib/javax.servlet.jsp.jstl.jar!/" />
-    <libelement value="jar://$MODULE_DIR$/WebRoot/WEB-INF/lib/jstl-impl.jar!/" />
+    <libelement value="jar://$USER_HOME$/Documents/Tencent Files/1724946813/FileRecv/servlet-api.jar!/" />
     <conelement value="org.eclipse.jst.j2ee.internal.web.container" />
     <conelement value="org.eclipse.jst.j2ee.internal.module.container" />
-    <conelement value="org.eclipse.jst.server.core.container/org.eclipse.jst.server.tomcat.runtimeTarget/Apache Tomcat v7.0" />
     <conelement value="org.eclipse.jst.server.core.container/org.eclipse.jst.server.tomcat.runtimeTarget/Apache Tomcat v9.0" />
     <src_description expected_position="0">
       <src_folder value="file://$MODULE_DIR$/src" expected_position="0" />
@@ -21,17 +19,6 @@
         <webroots>
           <root url="file://$MODULE_DIR$/WebRoot" relative="/" />
         </webroots>
-        <sourceRoots />
-      </configuration>
-    </facet>
-    <facet type="Spring" name="Spring">
-      <configuration>
-        <fileset id="fileset" name="Spring Application Context" removed="false">
-          <file>file://$MODULE_DIR$/src/applicationContext.xml</file>
-          <file>file://$MODULE_DIR$/config/spring-common.xml</file>
-          <file>file://$MODULE_DIR$/config/spring-mvc.xml</file>
-          <file>file://$MODULE_DIR$/src/springMVC-config.xml</file>
-        </fileset>
       </configuration>
     </facet>
   </component>
@@ -45,25 +32,14 @@
     <orderEntry type="jdk" jdkName="11" jdkType="JavaSDK" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module-library" exported="">
-      <library name="javax.servlet.jsp.jstl.jar">
+      <library name="servlet-api.jar">
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/WebRoot/WEB-INF/lib/javax.servlet.jsp.jstl.jar!/" />
+          <root url="jar://$USER_HOME$/Documents/Tencent Files/1724946813/FileRecv/servlet-api.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
       </library>
     </orderEntry>
-    <orderEntry type="module-library" exported="">
-      <library name="jstl-impl.jar">
-        <CLASSES>
-          <root url="jar://$MODULE_DIR$/WebRoot/WEB-INF/lib/jstl-impl.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES />
-      </library>
-    </orderEntry>
-    <orderEntry type="library" exported="" name="Spring-5.2.3.RELEASE" level="project" />
-    <orderEntry type="library" exported="" name="lib" level="project" />
-    <orderEntry type="library" name="Java EE 6-Java EE 6" level="project" />
+    <orderEntry type="library" name="lib" level="project" />
   </component>
 </module>

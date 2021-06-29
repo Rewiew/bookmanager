@@ -1,46 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="Encoding">
-    <file url="file://$PROJECT_DIR$/src/com/controller" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/com/controller/AllusersController.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/com/controller/DingdanxinxiController.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/com/controller/GoumaijiluController.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/com/controller/IndexController.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/com/controller/LiuyanbanController.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/com/controller/PinglunController.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/com/controller/ShangpinxinxiController.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/com/controller/ShoucangjiluController.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/com/controller/XinwentongzhiController.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/com/controller/YonghuzhuceController.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/com/controller/YouqinglianjieController.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/com/controller/hsgloginController.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/com/dao" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/com/dao/AllusersMapper.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/com/dao/DingdanxinxiMapper.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/com/dao/GoumaijiluMapper.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/com/dao/LiuyanbanMapper.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/com/dao/PinglunMapper.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/com/dao/ShangpinxinxiMapper.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/com/dao/ShoucangjiluMapper.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/com/dao/XinwentongzhiMapper.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/com/dao/YonghuzhuceMapper.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/com/dao/YouqinglianjieMapper.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/com/entity" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/com/entity/Allusers.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/com/entity/Dingdanxinxi.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/com/entity/Goumaijilu.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/com/entity/Liuyanban.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/com/entity/Pinglun.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/com/entity/Shangpinxinxi.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/com/entity/Shoucangjilu.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/com/entity/Xinwentongzhi.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/com/entity/Yonghuzhuce.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/com/entity/Youqinglianjie.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/com/mapper" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/com/server" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/com/util" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/com/util/PageInfo.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/com/util/db.java" charset="UTF-8" />
+  <component name="Encoding" defaultCharsetForPropertiesFiles="UTF-8">
+    <file url="file://$PROJECT_DIR$/src/com/controller/PurchaseController.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/util/CheckCode.java" charset="UTF-8" />
     <file url="PROJECT" charset="UTF-8" />
   </component>
 </project>

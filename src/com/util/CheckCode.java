@@ -1,6 +1,6 @@
 package com.util;
 /**
- * 验证码生成类
+ * 楠岃瘉鐮佺敓鎴愮被
  */
 import java.util.Random;
 

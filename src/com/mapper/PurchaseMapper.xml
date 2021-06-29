@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dao.PurchaseMapper">
+    <resultMap id="BaseResultMap" type="com.entity.Purchase">
+        <id column="id" jdbcType="INTEGER" property="id" />
+        <result column="shangpinbianhao" jdbcType="VARCHAR" property="shangpinbianhao" />
+        <result column="shangpinmingcheng" jdbcType="VARCHAR" property="shangpinmingcheng" />
+        <result column="leixing" jdbcType="VARCHAR" property="leixing" />
+        <result column="pinpai" jdbcType="VARCHAR" property="pinpai" />
+        <result column="xiaoliang" jdbcType="VARCHAR" property="xiaoliang" />
+        <result column="kucun" jdbcType="VARCHAR" property="kucun" />
+        <result column="jiage" jdbcType="VARCHAR" property="jiage" />
+        <result column="goumaishuliang" jdbcType="VARCHAR" property="goumaishuliang" />
+        <result column="goumaijine" jdbcType="VARCHAR" property="goumaijine" />
+        <result column="yonghuming" jdbcType="VARCHAR" property="yonghuming" />
+        <result column="beizhu" jdbcType="VARCHAR" property="beizhu" />
+        <result column="issh" jdbcType="VARCHAR" property="issh" />
+        <result column="addtime" jdbcType="VARCHAR" property="addtime" />
+    </resultMap>
+    <sql id="Base_Column_List">
+        id, shangpinbianhao,shangpinmingcheng,leixing,pinpai,xiaoliang,kucun,jiage,goumaishuliang,goumaijine,yonghuming,beizhu,issh, addtime
+    </sql>
+    <select id="quchongGoumaijilu"  parameterType="java.util.Map" resultMap="BaseResultMap" >
+        select
+        <include refid="Base_Column_List" />
+        from PURCHASE
+        where yonghuming = #{yonghuming,jdbcType=VARCHAR} limit 0,1
+    </select>
+    <select id="getCount"   resultType="int" parameterType="java.util.Map" >
+        select  count(*) from PURCHASE  where 1=1
+        <if test="shangpinbianhao!=null">and shangpinbianhao like binary  concat('%',#{shangpinbianhao,jdbcType=VARCHAR},'%')</if>
+        <if test="shangpinmingcheng!=null">and shangpinmingcheng like binary  concat('%',#{shangpinmingcheng,jdbcType=VARCHAR},'%')</if>
+        <if test="leixing!=null">and leixing like binary  concat('%',#{leixing,jdbcType=VARCHAR},'%')</if>
+        <if test="pinpai!=null">and pinpai like binary  concat('%',#{pinpai,jdbcType=VARCHAR},'%')</if>
+        <if test="xiaoliang!=null">and xiaoliang like binary  concat('%',#{xiaoliang,jdbcType=VARCHAR},'%')</if>
+        <if test="kucun!=null">and kucun like binary  concat('%',#{kucun,jdbcType=VARCHAR},'%')</if>
+        <if test="jiage!=null">and jiage like binary  concat('%',#{jiage,jdbcType=VARCHAR},'%')</if>
+        <if test="goumaishuliang1!=null">and goumaishuliang &gt;=  concat('',#{goumaishuliang1,jdbcType=VARCHAR},'')</if>
+        <if test="goumaishuliang2!=null">and goumaishuliang &lt;=  concat('',#{goumaishuliang2,jdbcType=VARCHAR},'')</if>
+        <if test="goumaijine!=null">and goumaijine like binary  concat('%',#{goumaijine,jdbcType=VARCHAR},'%')</if>
+        <if test="yonghuming!=null">and yonghuming like binary  concat('%',#{yonghuming,jdbcType=VARCHAR},'%')</if>
+        <if test="beizhu!=null">and beizhu like binary  concat('%',#{beizhu,jdbcType=VARCHAR},'%')</if>
+
+    </select>
+    <select id="getAll"   resultMap="BaseResultMap" parameterType="java.util.Map" >
+        select   <include refid="Base_Column_List" /> from PURCHASE  where 1=1
+        <if test="yonghuming!=null">
+            and yonghuming =#{yonghuming}
+        </if>
+    </select>
+
+    <select id="getsygoumaijilu1"   resultMap="BaseResultMap" parameterType="java.util.Map" >
+        select   <include refid="Base_Column_List" /> from PURCHASE  where 1=1
+        limit 0,5
+    </select>
+    <select id="getsygoumaijilu2"   resultMap="BaseResultMap" parameterType="java.util.Map" >
+        select   <include refid="Base_Column_List" /> from PURCHASE  where 1=1
+        limit 0,5
+    </select>
+    <select id="getsygoumaijilu3"   resultMap="BaseResultMap" parameterType="java.util.Map" >
+        select   <include refid="Base_Column_List" /> from PURCHASE  where 1=1
+        limit 0,5
+    </select>
+
+    <select id="getByPage" parameterType="java.util.Map" resultMap="BaseResultMap">
+        select  <include refid="Base_Column_List" />
+        from PURCHASE where 1=1
+        <if test="shangpinbianhao!=null">and shangpinbianhao like binary  concat('%',#{shangpinbianhao,jdbcType=VARCHAR},'%')</if>
+        <if test="shangpinmingcheng!=null">and shangpinmingcheng like binary  concat('%',#{shangpinmingcheng,jdbcType=VARCHAR},'%')</if>
+        <if test="leixing!=null">and leixing like binary  concat('%',#{leixing,jdbcType=VARCHAR},'%')</if>
+        <if test="pinpai!=null">and pinpai like binary  concat('%',#{pinpai,jdbcType=VARCHAR},'%')</if>
+        <if test="xiaoliang!=null">and xiaoliang like binary  concat('%',#{xiaoliang,jdbcType=VARCHAR},'%')</if>
+        <if test="kucun!=null">and kucun like binary  concat('%',#{kucun,jdbcType=VARCHAR},'%')</if>
+        <if test="jiage!=null">and jiage like binary  concat('%',#{jiage,jdbcType=VARCHAR},'%')</if>
+        <if test="goumaishuliang1!=null">and goumaishuliang &gt;=  concat('',#{goumaishuliang1,jdbcType=VARCHAR},'')</if>
+        <if test="goumaishuliang2!=null">and goumaishuliang &lt;=  concat('',#{goumaishuliang2,jdbcType=VARCHAR},'')</if>
+        <if test="goumaijine!=null">and goumaijine like binary  concat('%',#{goumaijine,jdbcType=VARCHAR},'%')</if>
+        <if test="yonghuming!=null">and yonghuming like binary  concat('%',#{yonghuming,jdbcType=VARCHAR},'%')</if>
+        <if test="beizhu!=null">and beizhu like binary  concat('%',#{beizhu,jdbcType=VARCHAR},'%')</if>
+        <if test="issh!=null">and issh like binary  concat('%',#{issh,jdbcType=VARCHAR},'%')</if>
+        order by id desc
+        <if test="pageno!=null and pageSize!=null">
+            limit #{pageno},#{pageSize}
+        </if>
+    </select>
+
+    <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List" />
+        from PURCHASE
+        where id = #{id,jdbcType=INTEGER}
+    </select>
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+        delete from PURCHASE
+        where id = #{id,jdbcType=INTEGER}
+    </delete>
+    <insert id="insert" parameterType="com.entity.Purchase">
+        insert into PURCHASE (id, shangpinbianhao,shangpinmingcheng,leixing,pinpai,xiaoliang,kucun,jiage,goumaishuliang,goumaijine,yonghuming,beizhu, addtime)
+        values (#{id,jdbcType=INTEGER}, #{shangpinbianhao,jdbcType=VARCHAR},#{shangpinmingcheng,jdbcType=VARCHAR},#{leixing,jdbcType=VARCHAR},#{pinpai,jdbcType=VARCHAR},#{xiaoliang,jdbcType=VARCHAR},#{kucun,jdbcType=VARCHAR},#{jiage,jdbcType=VARCHAR},#{goumaishuliang,jdbcType=VARCHAR},#{goumaijine,jdbcType=VARCHAR},#{yonghuming,jdbcType=VARCHAR},#{beizhu,jdbcType=VARCHAR}, #{addtime,jdbcType=VARCHAR})
+    </insert>
+    <insert id="insertSelective" parameterType="com.entity.Purchase">
+        insert into PURCHASE
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="id != null">
+                id,
+            </if>
+            <if test="shangpinbianhao != null"> shangpinbianhao, </if>
+            <if test="shangpinmingcheng != null"> shangpinmingcheng, </if>
+            <if test="leixing != null"> leixing, </if>
+            <if test="pinpai != null"> pinpai, </if>
+            <if test="xiaoliang != null"> xiaoliang, </if>
+            <if test="kucun != null"> kucun, </if>
+            <if test="jiage != null"> jiage, </if>
+            <if test="goumaishuliang != null"> goumaishuliang, </if>
+            <if test="goumaijine != null"> goumaijine, </if>
+            <if test="yonghuming != null"> yonghuming, </if>
+            <if test="beizhu != null"> beizhu, </if>
+
+            <if test="addtime != null">
+                addtime,
+            </if>
+
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="id != null">
+                #{id,jdbcType=INTEGER},
+            </if>
+            <if test="shangpinbianhao != null"> #{shangpinbianhao,jdbcType=VARCHAR},</if>
+            <if test="shangpinmingcheng != null"> #{shangpinmingcheng,jdbcType=VARCHAR},</if>
+            <if test="leixing != null"> #{leixing,jdbcType=VARCHAR},</if>
+            <if test="pinpai != null"> #{pinpai,jdbcType=VARCHAR},</if>
+            <if test="xiaoliang != null"> #{xiaoliang,jdbcType=VARCHAR},</if>
+            <if test="kucun != null"> #{kucun,jdbcType=VARCHAR},</if>
+            <if test="jiage != null"> #{jiage,jdbcType=VARCHAR},</if>
+            <if test="goumaishuliang != null"> #{goumaishuliang,jdbcType=VARCHAR},</if>
+            <if test="goumaijine != null"> #{goumaijine,jdbcType=VARCHAR},</if>
+            <if test="yonghuming != null"> #{yonghuming,jdbcType=VARCHAR},</if>
+            <if test="beizhu != null"> #{beizhu,jdbcType=VARCHAR},</if>
+
+            <if test="addtime != null">
+                #{addtime,jdbcType=VARCHAR},
+            </if>
+
+        </trim>
+    </insert>
+    <update id="updateByPrimaryKeySelective" parameterType="com.entity.Purchase">
+        update PURCHASE
+        <set>
+            <if test="shangpinbianhao != null"> shangpinbianhao = #{shangpinbianhao,jdbcType=VARCHAR},</if>
+            <if test="shangpinmingcheng != null"> shangpinmingcheng = #{shangpinmingcheng,jdbcType=VARCHAR},</if>
+            <if test="leixing != null"> leixing = #{leixing,jdbcType=VARCHAR},</if>
+            <if test="pinpai != null"> pinpai = #{pinpai,jdbcType=VARCHAR},</if>
+            <if test="xiaoliang != null"> xiaoliang = #{xiaoliang,jdbcType=VARCHAR},</if>
+            <if test="kucun != null"> kucun = #{kucun,jdbcType=VARCHAR},</if>
+            <if test="jiage != null"> jiage = #{jiage,jdbcType=VARCHAR},</if>
+            <if test="goumaishuliang != null"> goumaishuliang = #{goumaishuliang,jdbcType=VARCHAR},</if>
+            <if test="goumaijine != null"> goumaijine = #{goumaijine,jdbcType=VARCHAR},</if>
+            <if test="yonghuming != null"> yonghuming = #{yonghuming,jdbcType=VARCHAR},</if>
+            <if test="beizhu != null"> beizhu = #{beizhu,jdbcType=VARCHAR},</if>
+
+            <if test="addtime != null">
+                addtime = #{addtime,jdbcType=VARCHAR},
+            </if>
+        </set>
+        where id = #{id,jdbcType=INTEGER}
+    </update>
+
+
+
+    <update id="updateByPrimaryKey" parameterType="com.entity.Purchase">
+        update PURCHASE
+        set shangpinbianhao = #{shangpinbianhao,jdbcType=VARCHAR},shangpinmingcheng = #{shangpinmingcheng,jdbcType=VARCHAR},leixing = #{leixing,jdbcType=VARCHAR},pinpai = #{pinpai,jdbcType=VARCHAR},xiaoliang = #{xiaoliang,jdbcType=VARCHAR},kucun = #{kucun,jdbcType=VARCHAR},jiage = #{jiage,jdbcType=VARCHAR},goumaishuliang = #{goumaishuliang,jdbcType=VARCHAR},goumaijine = #{goumaijine,jdbcType=VARCHAR},yonghuming = #{yonghuming,jdbcType=VARCHAR},beizhu = #{beizhu,jdbcType=VARCHAR},  addtime = #{addtime,jdbcType=VARCHAR} where id = #{id,jdbcType=INTEGER}
+    </update>
+</mapper>

@@ -2,11 +2,10 @@
   <library name="lib">
     <CLASSES>
       <root url="file://$PROJECT_DIR$/WebRoot/WEB-INF/lib" />
-      <root url="file://$PROJECT_DIR$/lib" />
+      <root url="jar://$USER_HOME$/Documents/Tencent Files/1724946813/FileRecv/servlet-api.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />
-    <jarDirectory url="file://$PROJECT_DIR$/lib" recursive="false" />
     <jarDirectory url="file://$PROJECT_DIR$/WebRoot/WEB-INF/lib" recursive="false" />
   </library>
 </component>

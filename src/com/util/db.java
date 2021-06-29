@@ -19,12 +19,12 @@ public class db {
 	 //private String dbDriver="com.microsoft.jdbc.sqlserver.SQLServerDriver";
 	// private String sConnStr = "jdbc:microsoft:sqlserver://localhost:1433;databasename=ssmtsschsg5984AHB4"; 
 	 
-	 private String dbDriver="com.mysql.cj.jdbc.Driver";
-	 private String sConnStr = "jdbc:mysql://localhost:3306/ssmtsschsg5984ahb4?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=GMT"; 
+	 private final String dbDriver="com.mysql.cj.jdbc.Driver";
+	 private final String sConnStr = "jdbc:mysql://localhost:3306/bookshop?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=GMT";
 	
 	 // private String dbDriver="net.sourceforge.jtds.jdbc.Driver";
 	// private String sConnStr = "jdbc:jtds:sqlserver://127.0.0.1:1433;databaseName=ssmtsschsg5984AHB4"; 
-	 private String date=new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(Calendar.getInstance().getTime());
+	 private final String date=new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(Calendar.getInstance().getTime());
 	 private List list;
 	  public Connection connect = null;
 	  public ResultSet rs=null;
@@ -55,9 +55,8 @@ public class db {
 	  
 	  public String hsggetoption(String ntable,String nzd){
 			StringBuffer imgStr = new StringBuffer();
-			imgStr.append("");
-			
-			String sql="";
+
+		  String sql="";
 			sql="select "+nzd+" from "+ntable+" order by id desc";
 			System.out.print(sql);
 			try{
@@ -76,8 +75,7 @@ public class db {
 		}
 	  public String hsggetoption2(String ntable,String nzd){
 			StringBuffer imgStr = new StringBuffer();
-			imgStr.append("");
-			imgStr.append("<option value=''>请选择</option>\n");
+		  imgStr.append("<option value=''>请选择</option>\n");
 			
 			String sql="";
 			sql="select "+nzd+" from "+ntable+" order by id desc";
@@ -96,9 +94,8 @@ public class db {
 		}
 	  public String hsggetoptiond(String ntable,String nzd,String nwbk){
 			StringBuffer imgStr = new StringBuffer();
-			imgStr.append("");
-			
-			String sql="";
+
+		  String sql="";
 			sql="select "+nzd+" from "+ntable+" order by id desc";
 			System.out.print(sql);
 			try{
@@ -146,7 +143,7 @@ public class db {
 			ret.append(format.format(date));
 			String rand = String.valueOf(Math.abs(random.nextInt()));
 			//ret.append(getDateStr());
-			ret.append(rand.substring(0,4));
+			ret.append(rand, 0, 4);
 			
 			return ret.toString();
 		} 
@@ -196,8 +193,7 @@ public class db {
 		
 		public String getxwlb(){
 			StringBuffer imgStr = new StringBuffer();
-			imgStr.append("");
-			
+
 			String sql="";
 			sql="select distinct(leibie) as ss from xinwentongzhi where leibie<>'站内新闻'";
 			System.out.print(sql);
@@ -334,7 +330,7 @@ public class db {
 			try {
 				connect=DriverManager.getConnection(sConnStr,nsa,nmm);
 				Statement stmt=connect.createStatement();
-				String tsql="select * from pinglun where biao='"+nbiao+"' and xinwenID='"+nid+"'";
+				String tsql="select * from review where biao='"+nbiao+"' and xinwenID='"+nid+"'";
 				rs=stmt.executeQuery(tsql);
 				
 			

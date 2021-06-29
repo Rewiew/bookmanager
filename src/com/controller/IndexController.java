@@ -1,51 +1,40 @@
 package com.controller;
 
-import java.io.File;
-
-import java.io.IOException;
-import java.sql.Timestamp;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 import javax.annotation.Resource;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpSession;
+
+import com.entity.shopItem;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.multipart.MultipartFile;
-import com.entity.Xinwentongzhi;
-import com.entity.Yonghuzhuce;
-import com.entity.Shangpinxinxi;
+import com.entity.News;
+import com.entity.loginUser;
 //jixacxishxu1
-import com.server.XinwentongzhiServer;
-import com.server.YonghuzhuceServer;
-import com.server.ShangpinxinxiServer;
+import com.server.NewsServer;
+import com.server.loginUserServer;
+import com.server.shopItemServer;
 //jixacxishxu2
-import com.util.PageBean;
+
 @Controller
 public class IndexController {
 	@Resource
-	private XinwentongzhiServer xinwentongzhiService;
+	private NewsServer xinwentongzhiService;
 	@Resource
-	private YonghuzhuceServer yonghuzhuceServer;
+	private loginUserServer loginUserServer;
 	@Resource
-	private ShangpinxinxiServer shangpinxinxiServer;
+	private shopItemServer shopItemServer;
 	//jixacxishxu3
 //	首页显示内容
 	@RequestMapping("index.do")
 	public String showIndex(ModelMap map){
 
-		List<Xinwentongzhi> syxinwentongzhi1=xinwentongzhiService.getsyxinwentongzhi1(null);
-		List<Xinwentongzhi> syxinwentongzhi2=xinwentongzhiService.getsyxinwentongzhi2(null);
-		List<Xinwentongzhi> syxinwentongzhi3=xinwentongzhiService.getsyxinwentongzhi3(null);
-		List<Yonghuzhuce> syyonghuzhuce1=yonghuzhuceServer.getsyyonghuzhuce1(null);
-		List<Shangpinxinxi> syshangpinxinxi1=shangpinxinxiServer.getsyshangpinxinxi1(null);
-		List<Shangpinxinxi> syshangpinxinxi2=shangpinxinxiServer.getsyshangpinxinxi2(null);
-		List<Shangpinxinxi> syshangpinxinxi3=shangpinxinxiServer.getsyshangpinxinxi3(null);
-		//jixacxishxu4
-		
+		List<News> syxinwentongzhi1=xinwentongzhiService.getsyxinwentongzhi1(null);
+		List<News> syxinwentongzhi2=xinwentongzhiService.getsyxinwentongzhi2(null);
+		List<News> syxinwentongzhi3=xinwentongzhiService.getsyxinwentongzhi3(null);
+		List<loginUser> syyonghuzhuce1= loginUserServer.getsyyonghuzhuce1(null);
+		List<shopItem> syshangpinxinxi1= shopItemServer.getsyshangpinxinxi1(null);
+		List<shopItem> syshangpinxinxi2= shopItemServer.getsyshangpinxinxi2(null);
+		List<shopItem> syshangpinxinxi3= shopItemServer.getsyshangpinxinxi3(null);
 	    map.put("syxinwentongzhi1", syxinwentongzhi1);
 	    map.put("syxinwentongzhi2", syxinwentongzhi2);
 	    map.put("syxinwentongzhi3", syxinwentongzhi3);
@@ -53,8 +42,6 @@ public class IndexController {
 	    map.put("syshangpinxinxi1", syshangpinxinxi1);
 	    map.put("syshangpinxinxi2", syshangpinxinxi2);
 	    map.put("syshangpinxinxi3", syshangpinxinxi3);
-	    //jixacxishxu5
-
 		return "default";
 	}
 

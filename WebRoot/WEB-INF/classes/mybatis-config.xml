@@ -4,17 +4,15 @@
   "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
    <mappers>
-   <mapper  resource="com/mapper/AllusersMapper.xml"/>
-   <mapper  resource="com/mapper/YonghuzhuceMapper.xml"/>
-   <mapper  resource="com/mapper/XinwentongzhiMapper.xml"/>
-   <mapper  resource="com/mapper/PinglunMapper.xml"/>
-   <mapper  resource="com/mapper/ShoucangjiluMapper.xml"/>
-   <mapper  resource="com/mapper/LiuyanbanMapper.xml"/>
-   <mapper  resource="com/mapper/YouqinglianjieMapper.xml"/>
-   <mapper  resource="com/mapper/GoumaijiluMapper.xml"/>
-   <mapper  resource="com/mapper/DingdanxinxiMapper.xml"/>
-   <mapper  resource="com/mapper/ShangpinxinxiMapper.xml"/>
-
+   <mapper  resource="com/mapper/UserMapper.xml"/>
+   <mapper  resource="com/mapper/loginUserMapper.xml"/>
+   <mapper  resource="com/mapper/NewsMapper.xml"/>
+   <mapper  resource="com/mapper/ReviewMapper.xml"/>
+   <mapper  resource="com/mapper/boardMessageMapper.xml"/>
+   <mapper  resource="com/mapper/friendLinkMapper.xml"/>
+   <mapper  resource="com/mapper/PurchaseMapper.xml"/>
+   <mapper  resource="com/mapper/DepositMapper.xml"/>
+   <mapper  resource="com/mapper/shopItemMapper.xml"/>
    </mappers>
 
 </configuration>
